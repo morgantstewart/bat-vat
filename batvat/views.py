@@ -7,15 +7,15 @@ from django.http import HttpResponse
 
 # Define the home view function
 def home(request):
-    # Send a simple HTML response
-    return HttpResponse('<h1>Hello from BatVat</h1>')
+    # Render the home template
+    return render(request, 'home.html')
 
 # Define the about view function
 def about(request):
-    # Send a simple HTML response for the about page
-    return HttpResponse('<h1>About BatVat</h1><p>This is the about page for the Bat Vat application!</p>')
+    # Render the about template
+    return render(request, 'bats/about.html')
 
 # Define the bat index view function
 def bat_index(request):
-    # Send a simple HTML response for the bats page
-    return HttpResponse('<h1>Bats Index</h1><p>Welcome to the bats section!</p>')
+    # Render the bat index template
+    return render(request, 'bats/index.html')
