@@ -1,6 +1,7 @@
 # main_app/views.py
 
 from django.shortcuts import render
+from .models import Bat
 
 # Import HttpResponse to send text-based responses
 from django.http import HttpResponse
@@ -17,24 +18,12 @@ def about(request):
 
 # Define the bat index view function
 def bat_index(request):
+    bats = Bat.objects.all() 
     # Render the bat index template with the bats data
     return render(request, 'bats/index.html', {'bats': bats})
 
-# views.py
 
-class Bat:
-    def __init__(self, name, breed, description, age, image):
-        self.name = name
-        self.breed = breed
-        self.description = description
-        self.age = age
-        self.image = image
 
-# Create a list of Bat instances
-bats = [
-    Bat('Lolo', 'tabby', 'Kinda rude.', 3, 'css/images/baticon.png'),
-    Bat('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0, 'css/images/baticon.png'),
-    Bat('Fancy', 'bombay', 'Happy fluff ball.', 4, 'css/images/baticon.png'),
-    Bat('Bonk', 'selkirk rex', 'Meows loudly.', 6, 'css/images/baticon.png')
-]
-
+def bat_detail(request, bat_id):
+    bat = Bat.objects.get(id=bat_id)
+    return render(request, 'bats/detail.html', {'bat': bat})

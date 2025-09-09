@@ -12,6 +12,7 @@
 <section class="card-container">
 {% for bat in bats %}
   <div class="card">
+    <a href="/cats/{{ cat.id }}">
     <div class="card-content">
       <img src="{% static bat.image %}" alt="{{ bat.name }}" class="usr-img">
       <h2>{{ bat.name }}</h2>
@@ -19,6 +20,7 @@
       <p>Age: {{ bat.age }}</p>
       <p>Description: {{ bat.description }}</p>
     </div>
+    </a>
   </div>
 {% endfor %}
 </section>

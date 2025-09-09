@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/bats/bat-detail.css' %}" />
+{% endblock %} 
+{% block content %}
+<section class="bat-container">
+  <div class="bat-img">
+    <img src="{% static 'images/sk8r-boi-cat.svg' %}" alt="A skater boy cat" />
+  </div>
+  <div class="bat-details">
+    <h1>{{ bat.name }}</h1>
+    {% if bat.age > 0 %}
+      <h2>A {{ bat.age }} year old {{ bat.breed }}</h2>
+    {% else %}
+      <h2>A {{ bat.breed }} kitten.</h2>
+    {% endif %}
+    <p>{{ bat.description }}</p>
+  </div>
+</section>
+{% endblock %}
