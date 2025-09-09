@@ -1,6 +1,24 @@
+
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Hello from the BatVat</h1>
-<p>Welcome to our bat collection.</p>
-<img src="/static/css/images/baticon.png" alt="Bat Icon" style="width: 200px; height: 200px;">
+
+<section class="logo-container">
+  <div class="bat-container">
+    <img
+      src="{% static 'css/images/baticon.png' %}"
+      alt="The Bat Vat Bat"
+    />
+  </div>
+  <!-- <img
+    src="{% static 'css/images/baticon.png' %}"
+    alt="Text reads: Bat Collector"
+  /> -->
+</section>
+
 {% endblock %}

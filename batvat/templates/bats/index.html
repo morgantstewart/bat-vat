@@ -13,6 +13,7 @@
 {% for bat in bats %}
   <div class="card">
     <div class="card-content">
+      <img src="{% static bat.image %}" alt="{{ bat.name }}" class="usr-img">
       <h2>{{ bat.name }}</h2>
       <p>Breed: {{ bat.breed }}</p>
       <p>Age: {{ bat.age }}</p>

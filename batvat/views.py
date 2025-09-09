@@ -23,17 +23,18 @@ def bat_index(request):
 # views.py
 
 class Bat:
-    def __init__(self, name, breed, description, age):
+    def __init__(self, name, breed, description, age, image):
         self.name = name
         self.breed = breed
         self.description = description
         self.age = age
+        self.image = image
 
-# Create a list of Cat instances
+# Create a list of Bat instances
 bats = [
-    Bat('Lolo', 'tabby', 'Kinda rude.', 3),
-    Bat('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0),
-    Bat('Fancy', 'bombay', 'Happy fluff ball.', 4),
-    Bat('Bonk', 'selkirk rex', 'Meows loudly.', 6)
+    Bat('Lolo', 'tabby', 'Kinda rude.', 3, 'css/images/baticon.png'),
+    Bat('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0, 'css/images/baticon.png'),
+    Bat('Fancy', 'bombay', 'Happy fluff ball.', 4, 'css/images/baticon.png'),
+    Bat('Bonk', 'selkirk rex', 'Meows loudly.', 6, 'css/images/baticon.png')
 ]
 
