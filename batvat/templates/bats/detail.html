@@ -5,19 +5,22 @@
 {% endblock %} 
 {% block content %}
 <section class="bat-container">
-  {% for cat in cats %}
   <div class="bat-img">
-    <img src="{% static 'images/sk8r-boi-cat.svg' %}" alt="A skater boy cat" />
+    <img src="{% static 'images/baticon.png' %}" alt="A bat" />
   </div>
   <div class="bat-details">
     <h1>{{ bat.name }}</h1>
     {% if bat.age > 0 %}
       <h2>A {{ bat.age }} year old {{ bat.breed }}</h2>
     {% else %}
-      <h2>A {{ bat.breed }} kitten.</h2>
+      <h2>A {{ bat.breed }} baby bat.</h2>
     {% endif %}
     <p>{{ bat.description }}</p>
+  
+    <div class="bat-actions">
+      <a href="{% url 'bat-update' bat.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'bat-delete' bat.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
-  {% endfor %}
 </section>
 {% endblock %}

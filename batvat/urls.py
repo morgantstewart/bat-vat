@@ -25,5 +25,6 @@ urlpatterns = [
     path('bats/', views.bat_index, name='bat-index'),
     path('bats/<int:bat_id>/', views.bat_detail, name='bat-detail'),
     path('bats/create/', views.BatCreate.as_view(), name='bat-create'),
-
+     path('bats/<int:pk>/update/', views.BatUpdate.as_view(), name='bat-update'),
+    path('bats/<int:pk>/delete/', views.BatDelete.as_view(), name='bat-delete'),
 ]

@@ -2,8 +2,13 @@
 
 {% block content %}
 <div class="container">
-    <h1>Add a New Bat</h1>
-    
+    <div class="page-header">        <!-- Check if a bat object exists to determine if we're editing -->
+        {% if bat %}
+          <h1>Edit {{ bat.name }}</h1>
+        {% else %}
+          <h1>Add a New Bat</h1>
+        {% endif %}
+    </div>
     <form method="post">
         {% csrf_token %}
         <div class="form-group">

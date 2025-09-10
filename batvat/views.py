@@ -1,7 +1,7 @@
 # main_app/views.py
 
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bat
 
 # Import HttpResponse to send text-based responses
@@ -33,10 +33,14 @@ def bat_detail(request, bat_id):
 
 class BatCreate(CreateView):
     model = Bat
-    fields = '__all__'
+    fields = ['name', 'breed', 'description', 'age']
     template_name = 'bats/bat_form.html'
     success_url = '/bats/'
 
-def bat_index(request):
-    bats = Bat.objects.all()  # look familiar?
-    return render(request, 'bats/index.html', {'bats': bats})
+class BatUpdate(UpdateView):
+    model = Bat
+    fields = ['breed', 'description', 'age']
+
+class BatDelete(DeleteView):
+    model = Bat
+    success_url = '/bats/'
