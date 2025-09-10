@@ -39,8 +39,11 @@ class BatCreate(CreateView):
 
 class BatUpdate(UpdateView):
     model = Bat
-    fields = ['breed', 'description', 'age']
+    fields = ['name', 'breed', 'description', 'age']
+    template_name = 'bats/bat_form.html'
+    success_url = '/bats/'
 
 class BatDelete(DeleteView):
     model = Bat
+    template_name = 'bats/bat_confirm_delete.html'
     success_url = '/bats/'
