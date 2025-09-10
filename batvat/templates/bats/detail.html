@@ -5,6 +5,7 @@
 {% endblock %} 
 {% block content %}
 <section class="bat-container">
+  {% for cat in cats %}
   <div class="bat-img">
     <img src="{% static 'images/sk8r-boi-cat.svg' %}" alt="A skater boy cat" />
   </div>
@@ -17,5 +18,6 @@
     {% endif %}
     <p>{{ bat.description }}</p>
   </div>
+  {% endfor %}
 </section>
 {% endblock %}

@@ -24,4 +24,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('bats/', views.bat_index, name='bat-index'),
     path('bats/<int:bat_id>/', views.bat_detail, name='bat-detail'),
+    path('bats/create/', views.BatCreate.as_view(), name='bat-create'),
+
 ]

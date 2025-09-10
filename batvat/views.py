@@ -1,6 +1,7 @@
 # main_app/views.py
 
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Bat
 
 # Import HttpResponse to send text-based responses
@@ -27,3 +28,15 @@ def bat_index(request):
 def bat_detail(request, bat_id):
     bat = Bat.objects.get(id=bat_id)
     return render(request, 'bats/detail.html', {'bat': bat})
+
+# main-app/views.py
+
+class BatCreate(CreateView):
+    model = Bat
+    fields = '__all__'
+    template_name = 'bats/bat_form.html'
+    success_url = '/bats/'
+
+def bat_index(request):
+    bats = Bat.objects.all()  # look familiar?
+    return render(request, 'bats/index.html', {'bats': bats})
