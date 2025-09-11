@@ -37,7 +37,7 @@ def bat_detail(request, bat_id):
         'bat': bat, 'feeding_form': feeding_form
     })
 
-class BatCreate(CreateView):
+class BatCreate(LoginRequiredMixin, CreateView):
     model = Bat
     fields = ['name', 'breed', 'description', 'age']
     template_name = 'bats/bat_form.html'
@@ -64,13 +64,13 @@ def signup(request):
     return render(request, 'signup.html', context)
 
 
-class BatUpdate(UpdateView):
+class BatUpdate(LoginRequiredMixin, UpdateView):
     model = Bat
     fields = ['name', 'breed', 'description', 'age']
     template_name = 'bats/bat_form.html'
     success_url = '/bats/'
 
-class BatDelete(DeleteView):
+class BatDelete(LoginRequiredMixin, DeleteView):
     model = Bat
     template_name = 'bats/bat_confirm_delete.html'
     success_url = '/bats/'
@@ -90,11 +90,11 @@ def toy_index(request):
     toys = Toy.objects.filter(user=request.user)
     return render(request, 'toys/index.html', {'toys': toys})
 
-def toy_detail(request, toy_id):
+def toy_detail(LoginRequiredMixin,request, toy_id):
     toy = Toy.objects.get(id=toy_id)
     return render(request, 'toys/detail.html', {'toy': toy})
 
-class ToyCreate(CreateView):
+class ToyCreate(LoginRequiredMixin, CreateView):
     model = Toy
     fields = ['name', 'color']
     template_name = 'toys/toy_form.html'
@@ -104,13 +104,13 @@ class ToyCreate(CreateView):
         form.instance.user = self.request.user 
         return super().form_valid(form)
 
-class ToyUpdate(UpdateView):
+class ToyUpdate(LoginRequiredMixin, UpdateView):
     model = Toy
     fields = ['name', 'color']
     template_name = 'toys/toy_form.html'
     success_url = '/toys/'
 
-class ToyDelete(DeleteView):
+class ToyDelete(LoginRequiredMixin, DeleteView):
     model = Toy
     template_name = 'toys/toy_confirm_delete.html'
     success_url = '/toys/'
