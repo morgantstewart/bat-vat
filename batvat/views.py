@@ -9,6 +9,7 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Import HttpResponse to send text-based responses
@@ -90,7 +91,8 @@ def toy_index(request):
     toys = Toy.objects.filter(user=request.user)
     return render(request, 'toys/index.html', {'toys': toys})
 
-def toy_detail(LoginRequiredMixin,request, toy_id):
+@login_required
+def toy_detail(request, toy_id):
     toy = Toy.objects.get(id=toy_id)
     return render(request, 'toys/detail.html', {'toy': toy})
 
