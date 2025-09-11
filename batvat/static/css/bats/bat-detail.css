@@ -12,16 +12,16 @@
   }
   
   .bat-img {
-    width: 80px;
-    max-width: 80px;
+    width: 120px;
+    max-width: 120px;
     order: 1;
   }
   
   .bat-img img {
-    width: 120px !important;
-    height: 120px !important;
-    max-width: 120px !important;
-    max-height: 120px !important;
+    width: 160px !important;
+    height: 160px !important;
+    max-width: 160px !important;
+    max-height: 126px !important;
     object-fit: cover;
   }
   

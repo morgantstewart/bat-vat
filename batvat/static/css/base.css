@@ -42,6 +42,11 @@ html {
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     min-height: 100vh;
+    background-image: url('/static/css/images/wallpaper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     --nav-bg: rgba(104, 197, 248, 0.7);
     --nav-bg-ff: rgba(104, 197, 248, 0.9);
     --borders: rgb(36, 116, 248) solid 2px;
