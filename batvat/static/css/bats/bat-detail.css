@@ -51,9 +51,10 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-
-       background: rgba(0, 0, 0, 0.5);
-      max-width: 380px;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 380px;
+    align-self: flex-end;
   }
   
   .subsection-title {
@@ -118,21 +119,22 @@
   }
   
   .bat-details p {
-    font-size: ;
+    font-size: var(--font-reg);
     margin: 5px 0;
   }
   
   .feedings-toy-container > section {
-    width: 50%;
+    width: 80%;
     min-width: 360px;
-    border: var(--borders);
-    border-radius: var(--card-border-radius);
-    padding: 10px;
-    box-shadow: var(--card-box-shadow);
+    /* border: var(--borders); */
+    /* border-radius: var(--card-border-radius); */
+    /* padding: 10px; */
+    /* box-shadow: var(--card-box-shadow); */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
+    align-self: flex-end;
     /* background: rgba(0, 0, 0, 0.5);
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow); */
@@ -160,6 +162,23 @@
     font-size: var(--font-xl);
     margin: 0px;
     color: white;
+  }
+  
+  .feedings form,
+  .feedings table,
+  .feedings label,
+  .feedings input,
+  .feedings select,
+  .feedings button,
+  .feedings td,
+  .feedings th,
+  .feedings p {
+    font-family: Helvetica, Arial, sans-serif !important;
+  }
+  
+  .feedings td,
+  .feedings th {
+    font-size: 0.8em;
   }
   
   .subsection-content p,
@@ -192,9 +211,6 @@
     border-bottom: rgb(36, 116, 248) solid 2px;
   }
   
-  .feedings tr:nth-child(even) {
-    background-color: #f3f3fd;
-  }
   
   .toy-container p {
     margin: 12px 0;
@@ -254,14 +270,15 @@
     }
   
     .feedings-toy-container > section {
-      width: 15%;
+      width: 45%;
+      align-self: flex-end;
     }
   }
   
   @media only screen and (min-width: 1024px) {
     .feedings-toy-container {
       padding: 0 40px;
-      align-content: left;
+      align-content: flex-end;
     }
   }
   

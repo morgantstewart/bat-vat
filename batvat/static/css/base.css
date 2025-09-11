@@ -49,7 +49,7 @@ html {
     background-attachment: fixed;
     --nav-bg: rgba(104, 197, 248, 0.7);
     --nav-bg-ff: rgba(104, 197, 248, 0.9);
-    --borders: rgb(36, 116, 248) solid 2px;
+    --borders: rgb(39, 167, 124) solid 2px;
     --text-color: rgb(17, 20, 17);
     --link-hover-color: rgb(16, 56, 158);
     --button-bg: rgb(245, 245, 245);
@@ -95,7 +95,7 @@ html {
   
   nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: black;
     font-weight: 600;
     font-size: 1.5rem;
     font-family: 'Bagel Fat One', Helvetica;
@@ -267,6 +267,7 @@ html {
       background: var(--nav-bg-ff);
       border: var(--borders);
       border-radius: 18px;
+      font-color: rgb(33, 246, 186);
     }
   
     nav {
@@ -280,7 +281,7 @@ html {
       height: 35px;
       transparency: 0.6;
       outline: var(--borders);
-      outline-color:rgba(92, 255, 190, 0.6);
+      outline-color:rgb(53, 226, 157);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
@@ -295,7 +296,7 @@ html {
       .header-logo-container {
         background: rgba(92, 255, 190, 0.6);
         outline: var(--borders);
-        outline-color:rgba(92, 255, 190, 0.6);
+        outline-color:rgba(255, 255, 255, 0.6);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }
