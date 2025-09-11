@@ -20,11 +20,16 @@ main {
   }
   
   .logo-container {
-    max-width: 375px;
+    max-width: 575px;
   }
   
   .bat-container {
     width: 80%;
+  }
+  
+  .bat-container img {
+    width: 70%;
+    height: auto;
   }
   
   .login {
