@@ -25,11 +25,20 @@
       </div>
       <nav>
         <ul>
-          <li><a href="{% url 'bat-index' %}">All Bats</a></li>
-          <li><a href="{% url 'bat-create' %}">Add a Bat</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'bat-index' %}">All Bats</a></li>
+            <li><a href="{% url 'toy-index' %}">All Toys</a></li>
+            <li><a href="{% url 'bat-create' %}">Add a Bat</a></li>
+            <li><a href="{% url 'toy-create' %}">Add a Toy</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+          {% else %}
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'home' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          {% endif %}
         </ul>
       </nav>
+      
     </header>
     <main>
      {% block content %} 

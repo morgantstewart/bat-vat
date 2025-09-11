@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if toy %}
+  <h1>Edit {{ toy.name }}</h1>
+{% else %}
+  <h1>Add a New Toy</h1>
+{% endif %}
+
+<form action="" method="post">
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <input type="submit" value="Submit!" class="btn">
+</form>
+
+<div class="card-action">
+  <a href="{% url 'toy-index' %}" class="btn">Cancel</a>
+</div>
+
+{% endblock %}

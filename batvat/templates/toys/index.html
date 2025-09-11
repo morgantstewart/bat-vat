@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Toy List</h1>
+
+{% if toys %}
+  {% for toy in toys %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ toy.name }}</span>
+        <p>Color: {{ toy.color }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'toy-detail' toy.id %}">View Details</a>
+        <a href="{% url 'toy-update' toy.id %}">Edit</a>
+        <a href="{% url 'toy-delete' toy.id %}">Delete</a>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <p>No toys available</p>
+{% endif %}
+
+<div class="card-action">
+  <a href="{% url 'toy-create' %}" class="btn">Add a New Toy</a>
+</div>
+
+{% endblock %}
