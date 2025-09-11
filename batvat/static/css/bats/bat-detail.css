@@ -4,20 +4,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    margin: 20px;
   }
   
   .bat-img {
-    width: 75%;
-    max-width: 350px;
+    width: 100%;
+    max-width: 200px;
+    order: 1;
   }
   
-  .usr-img {
+  .bat-img img {
     width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
   }
   
   .bat-details {
-    width: 98%;
+    width: 100%;
+    max-width: 600px;
+    order: 2;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
   }
   
   .bat-actions {
@@ -191,14 +206,23 @@
     .bat-container {
       padding: 35px 30px;
       flex-direction: row;
-      align-items: center;
-      justify-content: start;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+      margin: 20px auto;
+      max-width: 1000px;
     }
   
     .bat-img {
-      width: 25%;
-      max-width: 250px;
-      margin-right: 25px;
+      width: 30%;
+      max-width: 180px;
+      order: 1;
+    }
+    
+    .bat-details {
+      width: 60%;
+      max-width: 500px;
+      order: 2;
     }
   
     .feedings-toy-container {

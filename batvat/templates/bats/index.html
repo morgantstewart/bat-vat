@@ -14,7 +14,11 @@
   <div class="card">
 <a href="{% url 'bat-detail' bat.id %}">
     <div class="card-content">
-      <img src="{% static bat.image %}" alt="{{ bat.name }}" class="usr-img">
+      {% if bat.image %}
+        <img src="{{ bat.image.url }}" alt="{{ bat.name }}" class="bat-img">
+      {% else %}
+        <img src="{% static 'css/images/baticon.png' %}" alt="{{ bat.name }}" class="bat-img">
+      {% endif %}
       <h2>{{ bat.name }}</h2>
       <p>Breed: {{ bat.breed }}</p>
       <p>Age: {{ bat.age }}</p>

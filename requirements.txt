@@ -2,3 +2,4 @@ Django==4.2.24
 asgiref==3.9.1
 sqlparse==0.5.3
 psycopg2-binary==2.9.10
+Pillow==10.0.1

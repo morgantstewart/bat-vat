@@ -6,7 +6,11 @@
 {% block content %}
 <section class="bat-container">
   <div class="bat-img">
-    <img src="{% static 'images/baticon.png' %}" alt="A bat" />
+    {% if bat.image %}
+      <img src="{{ bat.image.url }}" alt="{{ bat.name }}" />
+    {% else %}
+      <img src="{% static 'css/images/baticon.png' %}" alt="{{ bat.name }}" />
+    {% endif %}
   </div>
   <div class="bat-details">
     <h1>{{ bat.name }}</h1>

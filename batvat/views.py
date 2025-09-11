@@ -40,7 +40,7 @@ def bat_detail(request, bat_id):
 
 class BatCreate(LoginRequiredMixin, CreateView):
     model = Bat
-    fields = ['name', 'breed', 'description', 'age']
+    fields = ['name', 'breed', 'description', 'age', 'image']
     template_name = 'bats/bat_form.html'
     success_url = '/bats/'
     
@@ -67,7 +67,7 @@ def signup(request):
 
 class BatUpdate(LoginRequiredMixin, UpdateView):
     model = Bat
-    fields = ['name', 'breed', 'description', 'age']
+    fields = ['name', 'breed', 'description', 'age', 'image']
     template_name = 'bats/bat_form.html'
     success_url = '/bats/'
 
