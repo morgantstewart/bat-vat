@@ -20,15 +20,20 @@ html {
   /* resets font size to be 62.5% of the user preference - 
        in most browser configurations this will be 10px */
   :root {
-    font-size: 62.5%;
+    font-size: 75%;
   }
   
+  * {
+    font-family: 'Bagel Fat One', cursive !important;
+    font-size: 1.1em !important;
+  }
+
   body {
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    font-family: 'Bagel Fat One', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     min-height: 100vh;
@@ -74,7 +79,7 @@ html {
   }
   
   h2 {
-    font-size: var(--font-xl);
+    font-size: 2rem;
     font-family: 'Bagel Fat One', Helvetica;
   }
   
@@ -82,7 +87,7 @@ html {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.5rem;
     font-family: 'Bagel Fat One', Helvetica;
   }
   
