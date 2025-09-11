@@ -47,9 +47,9 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    --nav-bg: rgba(104, 197, 248, 0.7);
-    --nav-bg-ff: rgba(104, 197, 248, 0.9);
-    --borders: rgb(39, 167, 124) solid 2px;
+    --nav-bg: rgba(127, 255, 116, 0.5);
+    --nav-bg-ff: rgb(82, 253, 139);
+    --borders: rgb(36, 237, 123) solid 2px;
     --text-color: rgb(17, 20, 17);
     --link-hover-color: rgb(16, 56, 158);
     --button-bg: rgb(245, 245, 245);

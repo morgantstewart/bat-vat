@@ -1,0 +1,66 @@
+/* Toy Detail Page Styles */
+
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card-content {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--card-border-radius);
+  padding: 20px;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card-action {
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-action a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 0.9em;
+}
+
+.card-action a:hover {
+  color: var(--link-hover-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background: var(--link-hover-color);
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
