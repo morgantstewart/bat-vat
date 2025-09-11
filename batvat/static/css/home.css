@@ -38,11 +38,17 @@ main {
     justify-content: center;
     align-items: center;
     width: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--card-border-radius);
+    padding: 30px;
+    box-shadow: var(--card-shadow);
   }
   
   .login h1 {
     font-size: clamp(2.4rem, 2.5vw, 3.6rem);
     margin: 10px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .login > p {
@@ -55,11 +61,25 @@ main {
   .login label {
     font-size: var(--font-reg);
     margin-bottom: 6px;
+    color: white;
+    font-weight: bold;
   }
   
   .login input {
     font-size: var(--font-l);
-    padding: 2px 4px;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .login input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
   }
   
   .login .btn {
@@ -78,10 +98,6 @@ main {
     }
   
     .login {
-      border: var(--borders);
-      padding: 20px;
-      border-radius: var(--card-border-radius);
-      box-shadow: var(--card-box-shadow);
       width: 100%;
     }
   
