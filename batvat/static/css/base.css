@@ -20,12 +20,12 @@ html {
   /* resets font size to be 62.5% of the user preference - 
        in most browser configurations this will be 10px */
   :root {
-    font-size: 75%;
+    font-size: 65%;
   }
   
   * {
-    font-family: 'Bagel Fat One', cursive !important;
-    font-size: 1.1em !important;
+    font-family: 'Bagel Fat One', Helvetica !important;
+    font-size: 1.05em !important;
   }
   
   p, input, textarea, select, label, .form-group, .page-content, button, .btn, form, .login, .subsection-content {
@@ -42,7 +42,7 @@ html {
       'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     min-height: 100vh;
-    background-image: url('/static/css/images/wallpaper.png');
+    background-image: url('/static/css/images/pastelwallpaper.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,8 +107,8 @@ html {
   
   nav ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     flex-wrap: wrap;
   }
   
@@ -275,9 +275,14 @@ html {
   
     .header-logo-container {
       /* visual fix to help align logo */
-      padding-top: 6px;
-      width: 256px;
+      padding-top: 0px;
+      width: 45px;
       height: 35px;
+      transparency: 0.6;
+      outline: var(--borders);
+      outline-color:rgba(92, 255, 190, 0.6);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
     }
   
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -288,7 +293,9 @@ html {
   
       nav,
       .header-logo-container {
-        background: rgba(104, 197, 248, 0.6);
+        background: rgba(92, 255, 190, 0.6);
+        outline: var(--borders);
+        outline-color:rgba(92, 255, 190, 0.6);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       }

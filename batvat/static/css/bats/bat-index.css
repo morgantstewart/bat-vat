@@ -10,11 +10,15 @@
     margin: 10px;
     border: var(--borders);
     box-shadow: var(--card-box-shadow);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--card-border-radius);
   }
   
   .card-content {
     padding: 10px;
     width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--card-border-radius);
   }
   
   .bat-img {
@@ -26,16 +30,18 @@
   
   .card > a {
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
   }
   
   .card h2 {
     margin: 10px 0;
     font-size: var(--font-xl);
+    color: white;
   }
   
   .card p {
     margin: 5px 0;
-    font-size: var(--font-reg);
+    font-size: 0.5em;
+    color: white;
   }
   

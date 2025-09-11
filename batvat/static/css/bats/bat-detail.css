@@ -5,45 +5,55 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
     margin: 20px;
   }
   
   .bat-img {
-    width: 120px;
-    max-width: 120px;
+    width: 200px;
+    max-width: 300px;
     order: 1;
+    align-self: flex-start;
   }
   
   .bat-img img {
-    width: 160px !important;
-    height: 160px !important;
-    max-width: 160px !important;
-    max-height: 126px !important;
+    width: 100%;
+    height: 200px;
+    max-width: 200px !important;
+    max-height: 400px !important;
     object-fit: cover;
   }
   
   .bat-details {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     order: 2;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: var(--card-border-radius);
     box-shadow: var(--card-box-shadow);
+    align-self: flex-start;
   }
   
   .bat-actions {
     margin-top: 20px;
   }
   
+  .bat-details h1,
+  .bat-details h2,
+  .bat-details p {
+    color: white;
+  }
+  
   .feedings-toy-container {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
-    align-items: center;
+
+       background: rgba(0, 0, 0, 0.5);
+      max-width: 380px;
   }
   
   .subsection-title {
@@ -53,13 +63,16 @@
   }
   
   .subsection-content {
-    margin: 0 8px;
+    margin: 0px;
   }
   
   .toy-container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
   }
   
   .color-block {
@@ -93,7 +106,7 @@
   }
   
   .bat-details h2 {
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     margin: 0 0 10px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -105,12 +118,12 @@
   }
   
   .bat-details p {
-    font-size: var(--font-reg);
+    font-size: ;
     margin: 5px 0;
   }
   
   .feedings-toy-container > section {
-    width: 80%;
+    width: 50%;
     min-width: 360px;
     border: var(--borders);
     border-radius: var(--card-border-radius);
@@ -120,11 +133,15 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
+    /* background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow); */
   }
   
   .subsection-title img {
     height: 42px;
     margin-left: 8px;
+    color: black;
   }
   
   .subsection-title img:first-of-type {
@@ -135,12 +152,14 @@
   .toys h2 {
     font-size: 3.2rem;
     margin: 0;
+    color: white;
   }
   
   .feedings h3,
   .toys h3 {
     font-size: var(--font-xl);
-    margin: 10px 0;
+    margin: 0px;
+    color: white;
   }
   
   .subsection-content p,
@@ -156,8 +175,8 @@
   }
   
   .feedings table {
-    width: calc(100% - 16px);
-    text-align: left;
+    width: calc(100%);
+    text-align: center;
     border-collapse: collapse;
     margin: 0 8px;
   }
@@ -214,31 +233,35 @@
     }
   
     .bat-img {
-      width: 80px;
-      max-width: 80px;
+      width: 200px;
+      max-width: 200px;
       order: 1;
+      align-self: flex-start;
     }
     
     .bat-details {
       width: 60%;
       max-width: 500px;
       order: 2;
+      align-self: flex-start;
     }
   
     .feedings-toy-container {
       flex-direction: row;
       justify-content: space-around;
       align-items: flex-start;
+      color: white;
     }
   
     .feedings-toy-container > section {
-      width: 45%;
+      width: 15%;
     }
   }
   
   @media only screen and (min-width: 1024px) {
     .feedings-toy-container {
       padding: 0 40px;
+      align-content: left;
     }
   }
   
