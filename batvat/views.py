@@ -1,8 +1,10 @@
 # main_app/views.py
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Bat
+from .forms import FeedingForm
+
 
 # Import HttpResponse to send text-based responses
 from django.http import HttpResponse
@@ -27,9 +29,10 @@ def bat_index(request):
 
 def bat_detail(request, bat_id):
     bat = Bat.objects.get(id=bat_id)
-    return render(request, 'bats/detail.html', {'bat': bat})
-
-# main-app/views.py
+    feeding_form = FeedingForm()
+    return render(request, 'bats/detail.html', {
+        'bat': bat, 'feeding_form': feeding_form
+    })
 
 class BatCreate(CreateView):
     model = Bat
@@ -47,3 +50,13 @@ class BatDelete(DeleteView):
     model = Bat
     template_name = 'bats/bat_confirm_delete.html'
     success_url = '/bats/'
+
+def add_feeding(request, bat_id):
+    form = FeedingForm(request.POST)
+    if form.is_valid():
+
+        new_feeding = form.save(commit=False)
+        new_feeding.bat_id = bat_id
+        new_feeding.save()
+    return redirect('bat-detail', bat_id=bat_id)
+
