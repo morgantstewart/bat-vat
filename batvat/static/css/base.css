@@ -27,6 +27,11 @@ html {
     font-family: 'Bagel Fat One', cursive !important;
     font-size: 1.1em !important;
   }
+  
+  p, input, textarea, select, label, .form-group, .page-content, button, .btn, form, .login, .subsection-content {
+    font-family: Helvetica, Arial, sans-serif !important;
+    font-size: 0.8em !important;
+  }
 
   body {
     margin: 0;
