@@ -55,6 +55,7 @@
     background: rgba(0, 0, 0, 0.5);
     max-width: 380px;
     align-self: flex-end;
+    margin-left: auto;
   }
   
   .subsection-title {
@@ -264,9 +265,10 @@
   
     .feedings-toy-container {
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: flex-end;
       align-items: flex-start;
       color: white;
+      margin-left: auto;
     }
   
     .feedings-toy-container > section {
