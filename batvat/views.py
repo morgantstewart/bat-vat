@@ -26,8 +26,9 @@ def bat_index(request):
 
 
 
+@login_required
 def bat_detail(request, bat_id):
-    bat = Bat.objects.get(id=bat_id)
+    bat = Bat.objects.get(id=bat_id, user=request.user)
     feeding_form = FeedingForm()
     return render(request, 'bats/detail.html', {
         'bat': bat, 'feeding_form': feeding_form
@@ -69,6 +70,7 @@ class BatDelete(LoginRequiredMixin, DeleteView):
     template_name = 'bats/bat_confirm_delete.html'
     success_url = '/bats/'
 
+@login_required
 def add_feeding(request, bat_id):
     form = FeedingForm(request.POST)
     if form.is_valid():
@@ -85,7 +87,7 @@ def toy_index(request):
 
 @login_required
 def toy_detail(request, toy_id):
-    toy = Toy.objects.get(id=toy_id)
+    toy = Toy.objects.get(id=toy_id, user=request.user)
     return render(request, 'toys/detail.html', {'toy': toy})
 
 class ToyCreate(LoginRequiredMixin, CreateView):
