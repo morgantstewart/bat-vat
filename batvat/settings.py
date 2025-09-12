@@ -67,9 +67,9 @@ WSGI_APPLICATION = 'batvat.wsgi.application'
 
 
 
-if dj_database_url:
+if dj_database_url and os.environ.get('DATABASE_URL'):
     DATABASES = {
-        'default': dj_database_url.config(default='postgresql://morganstewart:@localhost:5432/batvat')
+        'default': dj_database_url.config()
     }
 else:
     DATABASES = {
@@ -115,7 +115,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-if dj_database_url:
+if dj_database_url and os.environ.get('DATABASE_URL'):
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
