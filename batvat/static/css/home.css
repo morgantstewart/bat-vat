@@ -15,10 +15,6 @@ main {
     flex-direction: column;
   }
   
-  .header-logo-container {
-    display: none;
-  }
-  
   .logo-container {
     max-width: none;
   }

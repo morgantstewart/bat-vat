@@ -1,24 +1,14 @@
-/* static/css/base.css  */
-
-
-  /* static/css/base.css  */
 
 html {
     box-sizing: border-box;
   }
   
-  /* The Universal Selector */
-  *, /* All elements*/
-  *::before, /* All ::before pseudo-elements */
+  *,
+  *::before,
   *::after {
-    /* All ::after pseudo-elements */
-    /* height & width will now include border & padding by default
-       but can be over-ridden as needed */
     box-sizing: inherit;
   }
   
-  /* resets font size to be 62.5% of the user preference - 
-       in most browser configurations this will be 10px */
   :root {
     font-size: 65%;
   }
@@ -69,7 +59,7 @@ html {
   
   header {
     width: 100%;
-    background: var(--nav-bg-ff); /* rgba(104, 197, 248, .9) */
+    background: var(--nav-bg-ff);
     border-bottom: var(--borders);
     font-size: 2.5rem;
   }
@@ -117,11 +107,6 @@ html {
     padding: 5px 8px;
   }
   
-  .header-logo-container {
-    margin: auto;
-    padding: 10px 20px 0;
-    max-width: 500px;
-  }
   
   .page-header {
     display: flex;
@@ -201,15 +186,7 @@ html {
     }
   
     nav,
-    .header-logo-container {
-      margin: 10px 0;
-      padding: 0 15px;
-    }
   
-    /* visual fix to help align logo */
-    .header-logo-container {
-      padding-top: 3px;
-    }
   
     nav {
       margin: 0 auto;
@@ -221,9 +198,6 @@ html {
       flex-wrap: nowrap;
     }
   
-    .header-logo-container {
-      width: 213px;
-    }
   
     .page-header h1 {
       font-size: var(--font-xtreme);
@@ -271,29 +245,11 @@ html {
     }
   
     nav,
-    .header-logo-container {
-      margin: 0;
-      background: var(--nav-bg-ff);
-      border: var(--borders);
-      border-radius: 18px;
-      font-color: rgb(33, 246, 186);
-    }
   
     nav {
       margin: 0 auto;
     }
   
-    .header-logo-container {
-      /* visual fix to help align logo */
-      padding-top: 0px;
-      width: 45px;
-      height: 35px;
-      transparency: 0.6;
-      outline: var(--borders);
-      outline-color:rgb(53, 226, 157);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-    }
   
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
       header {
@@ -301,8 +257,7 @@ html {
         backdrop-filter: none;
       }
   
-      nav,
-      .header-logo-container {
+      nav {
         background: rgba(92, 255, 190, 0.6);
         outline: var(--borders);
         outline-color:rgba(255, 255, 255, 0.6);

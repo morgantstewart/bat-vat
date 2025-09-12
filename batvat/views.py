@@ -1,4 +1,3 @@
-# main_app/views.py
 
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -12,16 +11,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-# Import HttpResponse to send text-based responses
-from django.http import HttpResponse
 
 class Home(LoginView):
     template_name = 'home.html'
 
 
-# Define the about view function
 def about(request):
-    # Render the about template
     return render(request, 'bats/about.html')
 
 @login_required
@@ -45,9 +40,7 @@ class BatCreate(LoginRequiredMixin, CreateView):
     success_url = '/bats/'
     
     def form_valid(self, form):
-        # Assign the logged in user (self.request.user)
-        form.instance.user = self.request.user  # form.instance is the bat
-        # Let the CreateView do its job as usual
+        form.instance.user = self.request.user
         return super().form_valid(form)
 
 def signup(request):
@@ -85,7 +78,6 @@ def add_feeding(request, bat_id):
         new_feeding.save()
     return redirect('bat-detail', bat_id=bat_id)
 
-# Toy Views
 @login_required
 def toy_index(request):
     toys = Toy.objects.filter(user=request.user)

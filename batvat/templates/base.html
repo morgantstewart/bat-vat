@@ -10,25 +10,17 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'css/images/baticon.png' %}"/>
     <title>Bat Vat</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
    
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 
-    {% block head %} 
+    {% block head %}
     {% endblock %}
-    
   </head>
   <body>
     <header>
-      <div class="header-logo-container">
-        <a href="/">
-         <img src="{% static 'css/images/baticon.png' %}" alt="BatVat Logo" style="width: 0px; height: 20px;" />
-
-        </a>
-      </div>
       <nav>
         <ul>
           {% if user.is_authenticated %}
@@ -44,11 +36,10 @@
           {% endif %}
         </ul>
       </nav>
-      
     </header>
     <main>
-     {% block content %} 
-     {% endblock %}
-     </main>
+      {% block content %}
+      {% endblock %}
+    </main>
   </body>
 </html>

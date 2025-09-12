@@ -7,8 +7,7 @@
 
 {% block content %}
 <div class="container">
-    <div class="page-header">        <!-- Check if a bat object exists to determine if we're editing -->
-        {% if bat %}
+    <div class="page-header">        {% if bat %}
           <h1>Edit {{ bat.name }}</h1>
         {% else %}
           <h1>Add a New Bat</h1>
