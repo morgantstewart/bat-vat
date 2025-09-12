@@ -71,6 +71,7 @@ html {
     width: 100%;
     background: var(--nav-bg-ff); /* rgba(104, 197, 248, .9) */
     border-bottom: var(--borders);
+    font-size: 2.5rem;
   }
   
   nav {
@@ -236,6 +237,14 @@ html {
   
     .page-header img:first-of-type {
       margin-left: 25px;
+    }
+
+    .subsection-about {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--card-shadow);
+        overflow: hidden;
+        transition: transform 0.3s ease;
     }
   
     @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
